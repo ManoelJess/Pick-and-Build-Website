@@ -1,0 +1,326 @@
+/*Style für das Gesamtelayout!*/
+*{
+    box-sizing: border-box;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+/*Style für Body*/
+body{
+   display: grid;
+   margin: 0%;
+   padding: 0%;
+   background-color: white;
+   height: 100%;
+}
+header{   /*Style für den Header*/
+    z-index: 1;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    top:0;
+    color:rgb(240, 233, 233);
+    background-color: #470b7f;
+}
+/*Anfang Style für den Toggle*/
+.toggle{
+    display: block;
+    font-size: 1.6rem;
+    cursor: pointer;
+    z-index: 20;
+}
+.ouvrir{
+    display: block;
+}
+.fermer{
+    display: none;
+
+}
+.open .ouvrir{
+    display:none;
+}
+.open .fermer{
+    display:block;
+    position:fixed;
+   margin-left:-26px;
+}
+/*Ende Style für den Toggle*/
+
+/*Anfang Style für die Navigationsliste*/
+.navi{
+    background-color: #470b7f;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top:-20px;
+    left:-20px;
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    flex-direction: column;
+    align-items: center;
+    transform: translatex(-110%);
+    transition: transform 0.5s;
+}
+
+.navi li,a{
+    margin: 20px 0px 20px -22px;
+    padding: 10px 20px;
+    font-size: 1.3em;
+    text-decoration: none;
+    color: white;
+}
+
+.open .navi{
+    transform: translatex(20px);
+}
+.open .navi a:hover{
+    background-color:#c03b79;
+}
+.car{       /*Style Logo fürs Logo*/
+    font-size: 44px;
+    color:#fff;
+}
+.name span{
+    color: #fff;
+    font-weight: bold;
+    font-size: 3rem;
+}
+.hilfe{
+    background-color: #8b8dd8;
+    border-radius: 7px;
+    border: 2px solid transparent;
+}
+
+p{
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
+}
+.container{
+    position: relative;
+    border-radius: 10px;
+    border: 5px solid #8c3ad9;
+    margin: 0 10px;
+    bottom: 10px;
+}
+h1{
+    text-align: center;
+}
+ /* Anfang Style für den Footer*/
+footer{
+    display: grid;
+    text-align: center;
+    color: white;
+    background-color: #470b7f;
+    width:100%;
+    padding-top:15px;
+    margin-bottom:0px;
+    clear: both;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.foot{          /*Style für jede Teile des Footers*/
+    display: grid;
+    padding: 15px 0;
+    font-size: 15px;
+}
+.titel{         /*Style für den Titel jeden Teile des Footers*/
+    font-size: 20px;
+}
+/*Style für den Teil Service*/
+.tit{ 
+    margin-bottom: 10%;
+}
+.fooo{
+    padding-bottom: 0%;
+}
+.foo1{          /*Style für die Linksservice im Footer*/
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    margin: 10px;
+    margin-right:30%;
+    position: relative;
+    margin-left: 100px;
+    bottom: 40px;
+    font-size: 1rem;
+}
+.foo1:hover{
+    margin-top: 9%;
+    border-radius: 7px;
+    border: 1px solid transparent;
+    background-color: rgb(25, 243, 105);
+}
+.foo1{
+    list-style-type: none;
+    display: grid;
+    flex-direction: column;
+    align-items: center;
+    padding: 1px;
+    margin: 5px 10%;
+}
+
+i{
+    color: white;
+}
+
+/*Style für den Teil Arbeitstage*/
+.iListTage{
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    align-items: center;
+    margin-left: 17%;
+}
+.iListTage li{
+    margin: 10px;
+}
+.ti{
+    margin-top: 0%;
+}
+#zeit{
+    font-size: 1rem;
+}
+/*Style für den Teil Folge Uns*/
+.foot .iLink-icone{  
+    align-items: center;
+    padding: 5px;
+    margin:0px 3px;
+}
+#add{
+    margin-top: 0%;
+}
+.icon{
+    color: #fff;
+}
+.lo img{
+    height: 25px;
+    width: 25px;
+}
+
+/*Responsive Style*/
+@media screen and (min-width:800px){
+    .toggle{
+        display: none;
+    }
+    .navi{
+        transform: translateX(0);
+        background-color: transparent;
+        position: relative;
+        display: flex;
+        flex-direction:row;
+        transition: transform 0s;
+        width: auto;
+        margin: 10px 0px 0px 0px;
+    }
+    .navi a{
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+        margin:-20px;
+       margin-right: 10px;
+        color: rgb(252, 244, 244);
+        font-size: 1.5rem;
+    }
+    .navi a:hover{
+        background-color: #79e110;
+        color: white;
+        border-radius: 6px;
+    }
+    .navi a i{
+        margin-right:5px;
+    }
+    .navi .hilfe{
+        background-color: #4fc03b;
+        color: white;
+        border-radius: 6px;
+        padding: 10px 20px;
+    }
+    .car{
+        font-size: 3rem;
+    }
+    .name{
+        font-size: 30px;
+        margin-top: -2%;
+    }
+    .name span{
+        font-size: 4rem;
+    }
+    header{
+        padding-bottom: 0px;
+        margin-bottom: -30px;
+    }
+    hr{
+        border: 1px solid black;
+        margin-bottom: 50px;
+    }
+    /*Footer*/
+    footer{
+        width: 100%;
+        position: relative;
+        display: flex;
+        flex-flow: row wrap;
+        padding-top: 30px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    footer .foot{
+        position: static;
+        margin: 5%px;
+    }
+    footer .foot:nth-child(3){
+        display: flex;
+        flex-direction: column;
+
+    }
+    .foot .name{
+        position: relative;
+        top:50%;
+        margin-left: 30px;
+    }
+    footer .lo{
+        margin-top: 20px;
+    }
+    .iListTage{
+        display: grid;
+        flex-direction: column;
+        margin: 20px 40% 20px 0 ;
+        align-items: center;
+    }
+    #zeit{
+        position: relative;
+        bottom: 40px;
+        margin-right: 35px;
+    }
+    .foo1{
+        position: relative;
+        bottom: 40px;
+    }
+    .folge{
+        display: flex;
+        flex-direction: column;
+        margin-left: 9%;
+    }
+    .fooo{
+        margin-left: 10%;
+    }
+    .kontakt{
+        margin-left: 10%;
+    }
+    #addKont{
+        position: relative;
+        top: -30%;
+    }
+    .fo {
+        margin-left: 9%;
+    }
+    #add{
+        position: relative;
+
+    }
+    #copi{
+        padding-top: 50px;
+        margin-left: 9%;
+
+    }
+    
+}

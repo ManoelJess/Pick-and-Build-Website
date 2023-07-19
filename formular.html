@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="de-de">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap" rel="stylesheet">
+        <title>Entdecken Sie unsere außergewöhnliche Fahrzeugindividualisierungsdienste</title>
+        <link rel="shortcut icon" href="bild/logo.jpeg" type="bild/jpeg">
+        <meta name="description" content="Personalisierte, Fahrzeugteile, Stil, Felgen, Reifen, Autoanpassung">
+        <meta property="og:title" content="132WEB - Fahrzeugteile für Ihren einzigartigen Stil">
+        <meta property="og:description" content="Fahrzeugindividualisierung neu definiert: Gestalten Sie ein Auto, das zu Ihnen passt">
+        <meta property="og:type" content="article">
+        <meta property="og:locale" content="de_DE">
+        <meta property="og:image" content="link to 1.91:1 image - min 1200x630">
+        <link rel="stylesheet" href="formular.css">
+        <script type="module" src="index.js"></script>
+    </head>
+    
+    <body>
+        <header>
+            <div class="name"><span>D</span>rive<span>D</span>eal <i class="fa-sharp car fa-solid fa-car"></i></div>
+            <div class="toggle">
+                <!--Icon für Toggle-->
+                <i class="fa-solid fa-circle-xmark fermer"></i>
+                <i class="fa-sharp fa-solid fa-bars ouvrir"></i>
+            </div>
+            <ul class="navi">  <!--Navigationsliste-->
+                <li><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+                <li><a href="customizer.html"><i class="fa-sharp fa-solid fa-hammer"></i> Customizer</a></li>
+                <li><a href="warenkorb.html"><i class="fa-solid fa-cart-shopping"></i> Warenkorb</a></li>
+                <li><a href="formular.html" class="hilfe"><i class="fa-sharp fa-solid fa-circle-question"></i>Hilfe</a></li>
+                <li><a href="ueber.html"><i class="fa-solid fa-circle-info"></i> Über uns</a></li>
+            </ul>
+        </header>
+        
+        <hr>
+        <h1>Kontaktieren Sie uns</h1>
+        <div class="f1">
+            <div class="boite" id="boite1">
+                <label for="Anrede">Anrede: </label >
+                <select id="Anrede" name="Anrede">
+                    <option value="Herr" selected>Herr</option>
+                    <option value="Frau">Frau</option>
+                </select>  
+            </div>
+                <div class="boit1">
+                    <div class="boite">
+                        <label for="Nachname">Nachname: </label >
+                        <div class="bt">
+                            <input type="text" name="Nachname" id="Nachname">  
+                        </div>  
+                    </div>
+                    <div class="boite">
+                        <label for="Vorname">Vorname: </label >
+                        <div class="bt">
+                            <input type="text" name="Vorname" id="Vorname">
+                        </div>
+                    </div>
+                </div>
+            <div class="boite">
+                <label for="Telefonnummer">Telefonnummer: </label >
+                <input type="number" name="Telefonnummer" id="Telefonnummer">
+            </div>
+            <div class="boite">
+                <label for="Email">E-mail </label >
+                <div class="bt">
+                    <input type="Email" name="Email" id="Email" placeholder="beispiel@xxxx.com">
+                </div>
+            </div>
+            <div class="boit">
+                <label>Nachricht: </label ><br>
+                <textarea placeholder="Schreiben sie Ihre Nachricht hier..."></textarea>
+            </div>
+        </div>
+        <div  class="schicke">
+            <button class="schicken">Senden</button>
+        </div>
+
+        <footer>
+            <div class="foot">
+                <div class="name" ><span>D</span>rive<span>D</span>eal <i class="fa-sharp car fa-solid fa-car"></i></div>
+            </div>
+    
+            <div class="foot fooo"><p class="titel tit">Unsere Services</p>
+                <a href="formular.html" class="foo1">Hilfe</a>
+                <a href="ueber.html" class="foo1">Über uns</a>
+                <a href="#" class="foo1">E-Commerce</a>
+                <a href="#" class="foo1">Ausland kaufen</a>
+                <a href="#" class="foo1">Werbung</a> 
+                <a href="#" class="foo1">Deal</a>
+            </div>
+            <div class="foot fo">
+                <p class="titel tite">Arbeitstage</p>
+                <ul class="iListTage" id="zeit">
+                    <li>Montag</li>
+                    <li>Dienstag</li>
+                    <li>Mittwoch</li>
+                    <li>Donnerstag</li>
+                    <li>Freitag</li>
+                    <li>Samstag</li>
+                    <li>Sonntag</li>
+                </ul>
+            </div>
+            <div class="foot kontakt"><p class="titel" >Unsere Kontakte</p>
+                <p id="addKont"><i class="fa-sharp icon fa-solid fa-envelope"></i> supportdrivedeal@gmail.com<br>
+                    <i class="fa-solid icon fa-phone"></i> +49 50986549654<br>
+                <i class="fa-solid icon fa-location-dot"></i>Erenburgerstraße 19, 67549 Worms<br>
+                </p>
+            </div>
+            <div class="foot folge">
+                <p class="titel" >Folge uns</p>
+                <div class="lo" id="add">
+                    <a target="_blank" href="bild/facebook.png" class="iLink-icone">
+                    <img src="bild/facebook.png" alt="facebook"></a>
+                    <a target="_blank" href="bild/instagram.png" class="iLink-icone">
+                    <img src="bild/instagram.png" alt="instagram"></a>
+                    <a target="_blank" href="bild/twitter.png" class="iLink-icone">
+                    <img src="bild/twitter.png" alt="twitter" ></a>
+                    <a target="_blank" href="bild/youtube.png" class="iLink-icone">
+                    <img src="bild/youtube.png" alt="youtube"></a>
+                </div>
+            </div> 
+    
+            <div class="foot" id="copi">&copy; [2023] [Drive Deal].Alle Rechte vorbehalten<br>Datenschutz | Datenschutzeinstellungen | Impressum</div>
+        </footer>
+    </body>
+</html>

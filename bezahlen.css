@@ -1,0 +1,47 @@
+.okbild{
+height: 100vh;
+ width: 100wh;
+display: grid;
+justify-content: center;
+align-items: center;
+background: linear-gradient(165deg, rgb(245, 241, 241), rgb(171, 143, 196));
+}
+
+.okbild img{
+    height: 300px;
+    width: 300px;
+    box-shadow: 0 0 0 0 #000;
+    border-radius:100%;
+    animation: pulse 1.3s infinite;
+}
+
+  @keyframes pulse{
+    to{
+        box-shadow: 0 0 0 18px rgba(0, 0, 0, 0.01);
+    }
+  }
+
+.okbild span{
+    color:rgb(10, 6, 6);
+    font-size: 25px;
+}
+
+.okbild span a{
+    position: relative;
+    margin-left: 70%;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 9px;
+    border: 2px solid transparent;
+    margin-bottom: 12%;
+    padding: 9px;
+    background: linear-gradient(165deg, rgb(222, 238, 222), rgb(141, 141, 150));
+    color: white;
+}
+
+.okbild span a:hover{
+    color: red;
+    text-decoration: underline;
+    font-weight: bold;
+}

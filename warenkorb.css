@@ -1,0 +1,697 @@
+*{
+  box-sizing: border-box;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+body{
+ display: grid;
+ margin: 0%;
+ padding: 0%;
+ background-color: white;
+ height: auto;
+}
+header{   /*Style für den Header*/
+  z-index: 1;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  top:0;
+  color:rgb(240, 233, 233);
+  background-color: #470b7f;
+}
+/*Anfang Style für den Toggle*/
+.toggle{
+  display: block;
+  font-size: 1.6rem;
+  cursor: pointer;
+  z-index: 20;
+}
+.ouvrir{
+  display: block;
+}
+.fermer{
+  display: none;
+
+}
+.open .ouvrir{
+  display:none;
+}
+.open .fermer{
+  display:block;
+  position:fixed;
+ margin-left:-26px;
+}
+/*Ende Style für den Toggle*/
+
+/*Anfang Style für die Navigationsliste*/
+.navi{
+  background-color: #470b7f;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top:-20px;
+  left:-20px;
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  flex-direction: column;
+  align-items: center;
+  transform: translatex(-110%);
+  transition: transform 0.5s;
+}
+
+.navi li,a{
+  margin: 20px 0px 20px -22px;
+  padding: 10px 20px;
+  font-size: 1.3em;
+  text-decoration: none;
+  color: white;
+}
+
+.open .navi{
+  transform: translatex(20px);
+}
+.open .navi a:hover{
+  background-color:#38296d;
+}
+.navi i{
+  color: white;
+}
+.toggle i{
+  color: white;
+}
+.car{       /*Style Logo fürs Logo*/
+  font-size: 44px;
+  color:#fff;
+}
+.name span{
+  color: #fff;
+  font-weight: bold;
+  font-size: 3rem;
+}
+.hilfe{
+  background-color: #8b8dd8;
+  border-radius: 7px;
+  border: 2px solid transparent;
+}
+
+#panier{
+    margin-left: 8px;
+}
+
+.bezahlen {
+
+    background-color: rgb(11, 11, 112);
+    color: aliceblue;
+    bottom: 0px;
+    height: 25px;
+    border-radius: 6px;
+    text-align: center;
+}
+
+#panier {
+    width: 80%;
+    height: 250px;
+    object-fit: contain;
+    padding-left: 20px;
+    border-radius: 7px;
+    width: 80%;
+    background: linear-gradient(167deg, rgb(7, 6, 6), rgb(20, 19, 20));
+}
+
+#panier img {
+    width: 70%;
+    height: 230px;
+    position:absolute;
+}
+#panier img:nth-child(3){
+    width: 40%;
+    height: 40%;
+    left:30%;
+    top:32%;
+    position: relative;
+}
+.old-price {
+    text-decoration:line-through;
+    color: rgb(74, 71, 71);
+    margin-left: 10px;
+    font-size: 15px;
+  }
+
+.new-price {
+    margin-left: 10px;
+    font-weight: bold;
+    font-size: 18px;
+    color: green;
+}
+.des{
+    margin-left: 20px;
+
+}
+/* Anfang Warenkorb */
+ .auto{
+    padding: 10px;
+    border-radius: 7px;
+    height: auto;
+    display:none;
+
+}
+
+.auto img{
+  height: 40vh;
+  width: 100vw;
+}
+.leer{
+  height: 25rem;
+  justify-content : center ;
+   display : grid;
+    align-items : center;
+    background-color : rgb(250, 246, 246);
+    color : rgb(10, 9, 9);
+}
+.leer p{
+
+  font-size: 20px;
+}
+.leer p a{
+  color: #1017e1;
+  text-decoration: underline;
+}
+.leer p a:hover{
+  color: green;
+}
+
+.bloc img{
+  height: 25px;
+  width: 35px;
+}
+
+.bloc span{
+
+  font-size:20px;
+}
+
+*,*::before,*::after {
+  box-sizing: border-box;
+}
+
+.container {
+  background-color: #F4F7FD;
+  border-radius: 10px;
+  margin-top: 10%;
+  margin-left: 3%;
+  display: grid;
+  justify-content: space-between;
+  padding: 10px 5px;
+  overflow:scroll;
+}
+.bezahl{
+  font-size: 3rem;
+  color: #000000;
+}
+/* formular für die zahlung mit der karte */
+.form-section{
+  position: relative;
+  font-size: 16px;
+  margin-right: 30%;
+}
+
+.form-section .title{
+position: relative;
+color: rgb(11, 154, 16);
+font-size: 18px;
+font-weight: 10px;
+height: 2.8rem;
+left: 4%
+}
+
+/*diese Anweisung wird verwendet, um gezielt
+ direkte Kindelemente anzusprechen, die einen
+  Klassennamen haben, der das Schlüsselwort 
+  ,,-section'' enthält*/
+
+.form-section > [class *='-section'],
+.form-section .input-row{
+ width: 100%;
+ margin-top: 16px;
+}
+
+.form-section .input-row{
+  display: grid;
+  justify-content: space-between;
+  gap: 5px;
+  width: 250px;
+}
+
+.form-section .card-number-section{
+  position: relative;
+  margin-top:32px  ;
+}
+
+.form-section .card-number-section .card-type{
+  position: absolute;
+  right: 2px;
+}
+
+.form-section .card-number-section .card-type svg{
+  position: relative;
+  width: 2em;
+  height: 2em;
+  right: -36px;
+}
+
+.form-section .card-number-section .card-type svg.visa,
+.form-section .card-number-section .card-type svg.mastercard,
+.form-section .card-number-section .card-type svg.kreditkarte,
+.form-section .card-number-section .card-type svg.error{
+ display:none ;
+}
+.error{
+  fill: red;
+}
+.close{
+  position: relative;
+  top:1%;
+  left: 90%;
+  font-size: 30px;
+  z-index: 1;
+}
+
+.form-section .card-cvv-section .info-bubble{
+  position: absolute;
+  right: .375rem;
+  font-weight: 700;
+  color:violet;
+  cursor: default;
+}
+
+.card-expiry-section{
+  flex-basis: 100%;
+}
+
+.card-expiry-section .input{
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-expiry-section .input input{
+  flex-basis: 42%;
+}
+
+.form-section [class*='-section'] label {
+  font-weight: 500;
+  color: #000000;
+  font-weight: bold;
+}
+
+.form-section .input{
+  width: 100%;
+  margin-top:.5rem;
+}
+
+.form-section .input input{
+  width: 100%;
+ font-size: 1.25rem;
+ font-weight: 500;
+ padding: .25rem .125rem;
+ border:none;
+ border-bottom: 1px solid rgb(66,66,66);
+ background-color: transparent;
+
+}
+ /* wenn die Karte ungültig ist */
+.form-section .input input.invalid{
+  border-color: red;
+}
+
+.form-section .input  ::placeholder {
+  opacity: .5;
+}
+
+.form-section .input input:focus{
+  border-bottom: 1.5px solid rgb(0, 0, 0);
+}
+.paytext{
+  margin-left: 20px;
+}
+.payment-btn{
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  border: none;
+  background-color: transparent;
+  border-radius: 8px;
+  font-size: 10px;
+  cursor: pointer;
+  padding: 12px 24px .75rem 0;
+  margin-top: 18px;
+  transition:  all ease-in-out 200ms;
+}
+
+ .payment-btn .btn-icon{
+  color: currentcolor;
+  transition: all ease-in-out 200ms;
+  fill: rgba(0, 0, 0, 1);
+}
+
+
+.payment-btn:hover {
+  color: white;
+  background:linear-gradient(170deg, gray, violet);
+  padding-left: 1.5rem;
+}
+
+/*nur nach dem Klick auf den bezahlen-Button  */
+
+.backgroundfenster {
+  display:none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  bottom: 1px;
+  z-index : 30;
+  background: linear-gradient(300deg, #533272, #470b7f);
+}
+
+/* Zum Anzeigen des backgroundfenster*/
+.active {
+  display: flex !important;
+}
+
+.bezahlenfenster {
+  border-radius: 20px;
+  width: 80%;
+  height: auto;
+  color: black;
+  font-size: 17px;
+  background-color: white;
+  padding: 20px;
+  overflow: scroll;
+  margin: 10%;
+}
+
+/* button bezahlen*/
+.bezahlen {
+  position: relative;
+  height: 30px;
+  width: 9rem;
+  left: 60%;
+  background-color: rgb(11, 11, 112);
+  color: aliceblue;
+  border-radius: 7px;
+  border: none;
+  font-size: 20px;
+}
+.bezahlenfenster h1{
+  margin-top: 0%;
+}
+.bezah{
+  text-align: center;
+  color: #7829c2;
+  font-size: 3rem;
+}
+
+/* Anfang Style für den Footer*/
+footer{
+  display: grid;
+  text-align: center;
+  color: white;
+  background-color:#470b7f;
+  width:100%;
+  padding-top:15px;
+  margin-bottom:0px;
+  clear: both;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.foot{          /*Style für jede Teile des Footers*/
+  display: grid;
+  padding: 15px 0;
+  font-size: 15px;
+}
+.titel{         /*Style für den Titel jeden Teile des Footers*/
+  font-size: 20px;
+}
+/*Style für den Teil Service*/
+.tit{
+  margin-bottom: 10%;
+}
+.fooo{
+  padding-bottom: 0%;
+}
+.foo1{          /*Style für die Linksservice im Footer*/
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+  margin: 10px;
+  margin-right:30%;
+  position: relative;
+  margin-left: 100px;
+  bottom: 40px;
+  font-size: 1rem;
+}
+.foo1:hover{
+  margin-top: 9%;
+  border-radius: 7px;
+  border: 1px solid transparent;
+  background-color: rgb(25, 243, 105);
+}
+.foo1{
+  list-style-type: none;
+  display: grid;
+  flex-direction: column;
+  align-items: center;
+  padding: 1px;
+  margin: 5px 10%;
+}
+
+i{
+  color: #000000;
+}
+
+/*Style für den Teil Arbeitstage*/
+.iListTage{
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  align-items: center;
+  margin-left: 17%;
+}
+.iListTage li{
+  margin: 10px;
+}
+.ti{
+  margin-top: 0%;
+}
+#zeit{
+  font-size: 1rem;
+}
+/*Style für den Teil Folge Uns*/
+.foot .iLink-icone{
+  align-items: center;
+  padding: 5px;
+  margin:0px 3px;
+}
+#add{
+  margin-top: 0%;
+}
+.icon{
+  color: #fff;
+}
+.lo img{
+  height: 25px;
+  width: 25px;
+}
+
+@media screen and (min-width:800px){
+  .toggle{
+    display: none;
+  }
+  .navi{
+      transform: translateX(0);
+      background-color: transparent;
+      position: relative;
+      display: flex;
+      flex-direction:row;
+      transition: transform 0s;
+      width: auto;
+      margin: 10px 0px 0px 0px;
+  }
+.navi a{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    margin:-20px;
+    margin-right: 0px;
+    margin-left:10px;
+    color: rgb(252, 244, 244);
+    font-size: 1.5rem;
+}
+.navi a:hover{
+    background-color: #4fc03b;
+    color: white;
+    border-radius: 6px;
+}
+.navi a i{
+    margin-right:5px;
+}
+.navi .hilfe{
+    background-color: #4fc03b;
+    color: white;
+    border-radius: 6px;
+    padding: 10px 20px;
+}
+.car{
+    font-size: 3rem;
+}
+.name{
+    font-size: 30px;
+    margin-top: -0.7%;
+}
+.name span{
+  font-size: 4rem;
+}
+header{
+  padding-bottom: 0px;
+}
+hr{
+    border: 1px solid black;
+    margin-bottom: 50px;
+}
+.navi li{
+  margin:-22px;
+  padding: 20px;
+}
+#panier{
+  height: 150px;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#panier {
+  width: 60%;
+  height: 250px;
+  object-fit: contain;
+  padding-left: 20px;
+  border-radius: 7px;
+  margin-left:10%;
+} 
+#panier img:nth-child(3){
+  width: 30%;
+  height: 40%;
+  left:0px;
+  top:0px;
+}
+#beschreibung{
+  font-size: 25px;
+  margin-left: 7%;
+}
+.new-price{
+  font-size: 22px;
+}
+svg{
+  height:24px;
+  width:24px;
+}
+  .form-section{
+    position: relative;
+    font-size: 16px;
+    left: 50%;
+  }
+  .payment-btn{
+    font-size: 1rem;
+  }
+
+  /*Footer*/
+  footer{
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-flow: row wrap;
+    padding-top: 30px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #470b7f;
+}
+footer .foot{
+    position: static;
+    margin: 5%px;
+}
+footer .foot:nth-child(3){
+    display: flex;
+    flex-direction: column;
+
+}
+.foot .name{
+    position: relative;
+    top:50%;
+    margin-left: 30px;
+}
+footer .lo{
+    margin-top: 20px;
+}
+.iListTage{
+    display: grid;
+    flex-direction: column;
+    margin: 20px 40% 20px 0 ;
+    align-items: center;
+}
+#zeit{
+    position: relative;
+    bottom: 40px;
+    margin-right: 35px;
+}
+.foo1{
+    position: relative;
+    bottom: 40px;
+}
+.folge{
+    display: flex;
+    flex-direction: column;
+    margin-left: 9%;
+}
+.fooo{
+    margin-left: 10%;
+}
+.kontakt{
+    margin-left: 10%;
+}
+#addKont{
+    position: relative;
+    top: -30%;
+}
+.fo {
+    margin-left: 9%;
+}
+#add{
+    position: relative;
+
+}
+#copi{
+    padding-top: 50px;
+    margin-left: 9%;
+
+}
+}
+
+@media screen and (min-width: 800px){
+  .bezahlenfenster{
+   width: 647px;
+  }
+  .backgroundfenster{
+    display: none;
+    justify-content: center;
+
+  }
+  #panier{
+    width: 65%;
+    height: 300px;
+    object-fit: contain;
+    padding-left: 20px;
+    margin-left: 10%;
+  }
+  #panier img{
+    width: auto;
+  }
+}
